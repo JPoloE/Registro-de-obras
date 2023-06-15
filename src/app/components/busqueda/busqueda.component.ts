@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { ColDef } from 'ag-grid-community';
+import { BtnDetallesComponent } from '../btn-detalles/btn-detalles.component';
 
 @Component({
   selector: 'app-busqueda',
@@ -42,11 +43,11 @@ export class BusquedaComponent implements OnInit {
   }
 
   colDefs: ColDef[] = [
-    { field: 'Cliente', width: 290 },
-    { field: 'Telefono', width: 290 },
-    { field: 'Correo', width: 290 },
-    { field: 'Direccion', width: 290 },
-    { field: '', width: 120, resizable: false }
+    { field: 'Cliente' },
+    { field: 'Telefono' },
+    { field: 'Correo' },
+    { field: 'Direccion' },
+    { field: '', width: 95, resizable: false, cellRenderer: BtnDetallesComponent }
 
   ]
 
