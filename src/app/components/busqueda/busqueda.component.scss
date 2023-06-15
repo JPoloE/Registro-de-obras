@@ -1,0 +1,42 @@
+h1 {
+    margin-left: 1.5%;
+
+}
+
+.busqueda {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-right: 50%;
+}
+
+.btn {
+    margin-left: 1%;
+}
+
+.input {
+    min-width: 50%;
+    min-height: 25px;
+}
+
+.pagina {
+    min-height: 75%;
+    min-width: 75%;
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right: 2%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.check {
+    margin-left: 2%;
+}
+
+.ag-theme-alpine {
+    margin-top: 2%;
+    margin-left: 1.5%;
+    height: 600px;
+    width: 1380px;
+
+    --ag-selected-row-background-color: rgb(0, 255, 0, 0.1);
+}

@@ -1,0 +1,18 @@
+<div class="pagina">
+
+    <br>
+    <h1>Logistica de obras</h1>
+
+    <div class="busqueda">
+        <input class="input" placeholder="Busqueda por obras" aria-label="Search">
+        <button class="btn" mat-raised-button color="primary" type="submit">Buscar</button>
+        <mat-checkbox class="check">Busqueda por cliente</mat-checkbox>
+    </div>
+
+    <div class="secciont">
+        <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
+            [columnDefs]="colDefs">
+
+        </ag-grid-angular>
+    </div>
+</div>
