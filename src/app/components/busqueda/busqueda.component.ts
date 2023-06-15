@@ -42,11 +42,11 @@ export class BusquedaComponent implements OnInit {
   }
 
   colDefs: ColDef[] = [
-    { field: 'Cliente', width: 300 },
-    { field: 'Telefono', width: 300 },
-    { field: 'Correo', width: 300 },
-    { field: 'Direccion', width: 300 },
-    { field: '', width: 180, resizable: false }
+    { field: 'Cliente', width: 290 },
+    { field: 'Telefono', width: 290 },
+    { field: 'Correo', width: 290 },
+    { field: 'Direccion', width: 290 },
+    { field: '', width: 120, resizable: false }
 
   ]
 
