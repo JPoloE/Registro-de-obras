@@ -18,7 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AgGridModule } from 'ag-grid-angular';
 import 'ag-grid-enterprise';
 import { DetallesComponent } from './components/detalles/detalles.component';
-import { AgregarcontactoComponent } from './components/agregarcontacto/agregarcontacto.component'
+import { AgregarcontactoComponent } from './components/agregarcontacto/agregarcontacto.component';
+import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.component'
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AgregarcontactoComponent } from './components/agregarcontacto/agregarco
     AppComponent,
     BusquedaComponent,
     DetallesComponent,
-    AgregarcontactoComponent
+    AgregarcontactoComponent,
+    BtnDetallesComponent
   ],
   imports: [
     BrowserModule,

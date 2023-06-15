@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-btn-detalles',
   template: `<p>
-   <button (click)="openDialog()" class="nuevo" mat-raised-button color="primary">Ver</button>{{value}}
+   <button (click)="openDialog()" class="nuevo" mat-icon-button color="primary"><mat-icon>searched</mat-icon></button>
   </p>`,
   styles: [
 
