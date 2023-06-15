@@ -46,24 +46,11 @@
     </div>
     <br>
     <h2>OTROS CONTACTOS</h2>
-    <div form class="formulario">
-        <mat-form-field class="input">
-            <mat-label>Cargo</mat-label>
-            <input class="i" placeholder="Ingresar Nombre" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Nombre</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Telefono</mat-label>
-            <input class="i" placeholder="Ingresar Correo" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Correo</mat-label>
-            <input class="i" placeholder="Ingresar Correo" matInput>
-        </mat-form-field>
-        <a href="">Ver más</a>
+    <div class="secciont">
+        <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
+            [columnDefs]="colDefs">
+
+        </ag-grid-angular>
     </div>
 
     <div class="opciones">
@@ -72,4 +59,5 @@
         <button class="guardar" mat-raised-button color="primary">Guardar</button>
         <button class="cerrar" mat-raised-button color="primary">Cerrar</button>
     </div>
+    <br>
 </div>
