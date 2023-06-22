@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AgGridModule } from 'ag-grid-angular';
 import 'ag-grid-enterprise';
@@ -42,7 +43,8 @@ import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.com
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
 
   ],
   providers: [],
