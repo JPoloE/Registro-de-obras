@@ -1,63 +1,104 @@
-<div class="Pagina">
-    <br>
-    <h1>INFORMACION DE CONTACTO</h1>
+<div class="pagina">
+  <br>
+  <h1>Información de contacto</h1>
 
-    <div form class="formulario">
+  <div class="row">
+    <div class="col-6">
+      <form>
         <mat-form-field class="input">
-            <mat-label>Nombre</mat-label>
-            <input placeholder="Ingresar Nombre" matInput>
+          <mat-label>Nombre de Obra</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.projectName" name="projectName" />
         </mat-form-field>
         <mat-form-field class="input">
-            <mat-label>Telefono</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
+          <mat-label>Dirección del Cliente</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.hasClientAddress" name="hasClientAddress" />
         </mat-form-field>
         <mat-form-field class="input">
-            <mat-label>Correo</mat-label>
-            <input type="email" placeholder="Ingresar Correo" matInput>
+          <mat-label>País</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.country" name="country" />
         </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Provincia</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.province" name="province" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Ciudad</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.city" name="city" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Tipo de Residencia</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.residenceType" name="residenceType" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Localidad</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.locality" name="locality" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Localidad 2</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.locality2" name="locality2" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Dirección</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.address" name="address" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Punto de Referencia</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.landmark" name="landmark" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Comentarios</mat-label>
+          <textarea class="i" matInput [(ngModel)]="proyecto.comments" name="comments"></textarea>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Teléfono del Proyecto</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.projectTelephone" name="projectTelephone" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Correo Electrónico del Proyecto</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.projectEmail" name="projectEmail" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Requiere Siso</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.requiresSiso" name="requiresSiso" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Nombre del Siso</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.sisoName" name="sisoName" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Teléfono del Siso</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.sisoTelephone" name="sisoTelephone" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Correo Electrónico del Siso</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.sisoEmail" name="sisoEmail" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>ID del Cliente</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.clientId" name="clientId" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Nombre del Cliente</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.clientName" name="clientName" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Teléfono del Cliente</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.clientTelephone" name="clientTelephone" />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Correo Electrónico del Cliente</mat-label>
+          <input class="i" matInput [(ngModel)]="proyecto.clientEmail" name="clientEmail" />
+        </mat-form-field>
+      </form>
     </div>
-    <div form class="formulario">
-        <mat-form-field class="input">
-            <mat-label>Pais</mat-label>
-            <input class="i" placeholder="Ingresar Nombre" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Departamento</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Ciudad</mat-label>
-            <input class="i" placeholder="Ingresar Correo" matInput>
-        </mat-form-field>
-    </div>
-    <div form class="formulario">
-        <mat-form-field class="input">
-            <mat-label>Barrio</mat-label>
-            <input class="i" placeholder="Ingresar Nombre" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Tipo de inmueble</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
-        </mat-form-field>
-        <mat-form-field class="input">
-            <mat-label>Direccion</mat-label>
-            <input class="i" placeholder="Ingresar Correo" matInput>
-        </mat-form-field>
-    </div>
+  </div>
 
-    <h2>OTROS CONTACTOS</h2>
-    <div class="secciont">
-        <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
-            [columnDefs]="colDefs">
+  <!-- Agregar secciones adicionales para mostrar más detalles del proyecto -->
 
-        </ag-grid-angular>
-    </div>
-
-    <div class="opciones">
-        <button (click)="openDialog()" class="nuevo" mat-raised-button color="primary">Nuevo contacto</button>
-        <button class="obras" mat-raised-button color="primary">Obras</button>
-        <button class="guardar" mat-raised-button color="primary">Guardar</button>
-        <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
-    </div>
-    <br>
+  <div class="opciones">
+    <button (click)="openDialog()" class="nuevo" mat-raised-button color="primary">Nuevo contacto</button>
+    <button class="guardar" mat-raised-button color="primary">Guardar</button>
+    <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+  </div>
+  <br>
 </div>

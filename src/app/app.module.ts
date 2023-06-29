@@ -15,12 +15,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,FormControl, ReactiveFormsModule } from '@angular/forms';
 
 import { AgGridModule } from 'ag-grid-angular';
 import 'ag-grid-enterprise';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { AgregarcontactoComponent } from './components/agregarcontacto/agregarcontacto.component';
-import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.component'
+import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.component';
+import { DetallesClientesComponent } from './components/detalles-clientes/detalles-clientes.component'
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.com
     BusquedaComponent,
     DetallesComponent,
     AgregarcontactoComponent,
-    BtnDetallesComponent
+    BtnDetallesComponent,
+    DetallesClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,9 @@ import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.com
     MatInputModule,
     MatSelectModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
