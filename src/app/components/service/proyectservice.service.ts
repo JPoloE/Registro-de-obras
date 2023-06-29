@@ -30,6 +30,10 @@ export class ProyectserviceService {
     return this.http.get<Contacts[]>(this.baseApiUrl + 'clients/FindClientContacts/' + id)
   }
 
+  getProjectsByUser(id: number):Observable<Projects[]>{
+    return this.http.get<Projects[]>(this.baseApiUrl + 'projects/FindProjectsByClientId/' + id)
+  }
+
 
 
 

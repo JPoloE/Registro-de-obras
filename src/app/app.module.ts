@@ -23,7 +23,8 @@ import { DetallesComponent } from './components/detalles/detalles.component';
 import { AgregarcontactoComponent } from './components/agregarcontacto/agregarcontacto.component';
 import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.component';
 import { DetallesClientesComponent } from './components/detalles-clientes/detalles-clientes.component';
-import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.component'
+import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.component';
+import { ObrasComponent } from './components/obras/obras.component'
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.com
     AgregarcontactoComponent,
     BtnDetallesComponent,
     DetallesClientesComponent,
-    BtnClientesComponent
+    BtnClientesComponent,
+    ObrasComponent
   ],
   imports: [
     BrowserModule,

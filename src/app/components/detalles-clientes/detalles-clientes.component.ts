@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProyectserviceService } from '../service/proyectservice.service';
 import { Projects } from '../interfaces/projects';
 import { Contacts } from '../interfaces/contacts';
+import { ObrasComponent } from '../obras/obras.component';
 
 
 interface FieldConfig {
@@ -55,6 +56,17 @@ export class DetallesClientesComponent implements OnInit {
     const dialogRef = this.dialog.open(AgregarcontactoComponent);
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openObrasModal(): void {
+    this.projectService.getProjectsByUser(this.proyecto.clientId).subscribe(project => { 
+      const dialogRef = this.dialog.open(ObrasComponent, {
+        data: project
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
     });
   }
 

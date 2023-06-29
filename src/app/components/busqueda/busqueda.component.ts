@@ -58,9 +58,21 @@ export class BusquedaComponent implements OnInit {
   buscar(): void {
     if (this.searchText) {
       if (this.searchByClient) {
-        this.rowData = this.originalRowData.filter(project =>
+        const filteredData = this.originalRowData.filter(project =>
           project.clientName.toLowerCase().includes(this.searchText.toLowerCase())
         );
+  
+        // Reducción para mostrar solo un cliente único
+        const uniqueClients = new Set<string>();
+        const filteredDataUnique = filteredData.filter(project => {
+          if (!uniqueClients.has(project.clientName)) {
+            uniqueClients.add(project.clientName);
+            return true;
+          }
+          return false;
+        });
+  
+        this.rowData = filteredDataUnique;
       } else {
         this.rowData = this.originalRowData.filter(project =>
           project.projectName.toLowerCase().includes(this.searchText.toLowerCase())
@@ -69,6 +81,7 @@ export class BusquedaComponent implements OnInit {
     } else {
       this.rowData = this.originalRowData; // Mostrar los datos originales sin filtrar
     }
+  
     this.gridOptions.api?.setRowData(this.rowData); // Actualizar los datos en la tabla
     this.gridOptions.api?.sizeColumnsToFit(); // Ajustar el tamaño de las columnas al contenido
   }
@@ -88,6 +101,7 @@ export class BusquedaComponent implements OnInit {
   private setDynamicColDefs(): void {
     this.dynamicColDefs = [
       { field: 'projectName', headerName: 'Nombre de obra', hide: this.searchByClient },
+      { field: 'clientName', headerName: 'Nombre del cliente', hide: this.searchByClient },
       { field: 'city', headerName: 'Ciudad', hide: this.searchByClient },
       { field: 'residenceType', headerName: 'Tipo de residencia', hide: this.searchByClient },
       { field: 'locality', headerName: 'Localidad 1', hide: this.searchByClient },
