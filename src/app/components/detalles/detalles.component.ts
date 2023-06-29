@@ -34,9 +34,8 @@ export class DetallesComponent implements OnInit {
   }
 
   countries: string[] = ['AFGANISTAN', 'COLOMBIA', 'PERU'];
-  provinces: string[] = ['ATLANTICO', 'BOLÍVAR', 'Provincia 3'];
-  cities: string[] = ['BARRANQUILLA', 'CARTAGENA', 'Ciudad 3'];
-  residenceTypes: string[] = ['URBANIZACION', 'EDIFICIO', 'Tipo 3'];
+ 
+  residenceTypes: string[] = ['URBANIZACION', 'EDIFICIO', 'CASA', 'HOTEL','CENTRO COMERCIAL', 'LOCAL COMERCIAL'];
 
   rowData: Contacts[] = [];
 
