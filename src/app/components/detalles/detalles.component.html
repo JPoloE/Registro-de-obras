@@ -9,26 +9,36 @@
           <mat-label>Nombre de Obra</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.projectName" name="projectName" />
         </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>Dirección del Cliente</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.hasClientAddress" name="hasClientAddress" />
-        </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>País</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.country" name="country" />
-        </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>Provincia</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.province" name="province" />
-        </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>Ciudad</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.city" name="city" />
-        </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>Tipo de Residencia</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.residenceType" name="residenceType" />
-        </mat-form-field>
+        
+          <mat-checkbox class="check" [(ngModel)]="proyecto.hasClientAddress" name="hasClientAddress">Direccion del Cliente</mat-checkbox>
+        
+          <mat-form-field class="input">
+            <mat-label>País</mat-label>
+            <mat-select [(ngModel)]="proyecto.country" name="country">
+              <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field class="input">
+            <mat-label>Provincia</mat-label>
+            <mat-select [(ngModel)]="proyecto.province" name="province">
+              <mat-option *ngFor="let province of provinces" [value]="province">{{ province }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field class="input">
+            <mat-label>Ciudad</mat-label>
+            <mat-select [(ngModel)]="proyecto.city" name="city">
+              <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field class="input">
+            <mat-label>Tipo de Residencia</mat-label>
+            <mat-select [(ngModel)]="proyecto.residenceType" name="residenceType">
+              <mat-option *ngFor="let residenceType of residenceTypes" [value]="residenceType">{{ residenceType }}</mat-option>
+            </mat-select>
+          </mat-form-field>
         <mat-form-field class="input">
           <mat-label>Localidad</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.locality" name="locality" />

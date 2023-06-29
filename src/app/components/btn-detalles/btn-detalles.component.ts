@@ -8,7 +8,7 @@ import { ProyectserviceService } from '../service/proyectservice.service';
 @Component({
   selector: 'app-btn-detalles',
   template: `<p>
-    <button (click)="openDialog()" class="nuevo" mat-icon-button color="primary"><mat-icon>searched</mat-icon>hbjhbj</button>
+    <button (click)="openDialog()" class="nuevo" mat-icon-button color="primary"><mat-icon>searched</mat-icon></button>
   </p>`,
   styles: []
 })

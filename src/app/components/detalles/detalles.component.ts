@@ -21,6 +21,7 @@ interface FieldConfig {
 })
 export class DetallesComponent implements OnInit {
   
+  
   proyecto: Projects;
   constructor(
     public dialog: MatDialog,
@@ -31,6 +32,11 @@ export class DetallesComponent implements OnInit {
   ) {
     this.proyecto = data[0];
   }
+
+  countries: string[] = ['AFGANISTAN', 'COLOMBIA', 'PERU'];
+  provinces: string[] = ['ATLANTICO', 'BOLÍVAR', 'Provincia 3'];
+  cities: string[] = ['BARRANQUILLA', 'CARTAGENA', 'Ciudad 3'];
+  residenceTypes: string[] = ['URBANIZACION', 'EDIFICIO', 'Tipo 3'];
 
   rowData: Contacts[] = [];
 
