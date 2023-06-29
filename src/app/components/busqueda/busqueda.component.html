@@ -1,20 +1,19 @@
 <div class="pagina">
     <br>
     <h1>Directorio</h1>
-
+  
     <div class="busqueda">
-        <input class="input" placeholder="Busqueda por obras" aria-label="Search">
-        <button class="btn" mat-raised-button color="primary" type="submit">Buscar</button>
-        <mat-checkbox class="check">Busqueda por cliente</mat-checkbox>
+      <input class="input" placeholder="Busqueda por obras" aria-label="Search" [(ngModel)]="searchText"
+        (ngModelChange)="buscar()">
+      <button class="btn" mat-raised-button color="primary" type="submit" (click)="buscar()">Buscar</button>
+      <mat-checkbox class="check" (change)="toggleSearchByClient()">Búsqueda por cliente</mat-checkbox>
     </div>
-
+  
     <div class="secciont">
-        <ag-grid-angular class="ag-theme-alpine"
-            [defaultColDef]="defaultColDef"
-            [rowData]="rowData"
-            [columnDefs]="colDefs"
-            [components]="frameworkComponents">
-        </ag-grid-angular>
+      <ag-grid-angular class="ag-theme-alpine" [gridOptions]="gridOptions" [defaultColDef]="defaultColDef"
+        [rowData]="rowData" [columnDefs]="dynamicColDefs" [components]="frameworkComponents">
+      </ag-grid-angular>
     </div>
     <br>
-</div>
+  </div>
+  
