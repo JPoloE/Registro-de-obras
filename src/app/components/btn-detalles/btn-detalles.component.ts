@@ -25,7 +25,6 @@ export class BtnDetallesComponent implements OnInit, ICellRendererAngularComp {
 
   openDialog(): void {
     this.proyectService.getProject(this.value).subscribe(project => { 
-      console.log('Project:', project);
       const dialogRef = this.dialog.open(DetallesComponent, {
         data: project
       });

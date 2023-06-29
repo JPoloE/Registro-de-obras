@@ -6,6 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProyectserviceService } from '../service/proyectservice.service';
 import { Projects } from '../interfaces/projects';
+import { Contacts } from '../interfaces/contacts';
 
 interface FieldConfig {
   key: keyof Projects;
@@ -31,16 +32,7 @@ export class DetallesComponent implements OnInit {
     this.proyecto = data[0];
   }
 
-  
-
-  rowData: any[] = [
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' },
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' },
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' },
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' },
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' },
-    { Cargo: 'Arquitecto', Nombre: 'Jesus Polo', Telefono: 3024339697, Correo: 'jesus@gmail.com' }
-  ];
+  rowData: Contacts[] = [];
 
   defaultColDef = {
     resizable: true,
@@ -49,10 +41,12 @@ export class DetallesComponent implements OnInit {
   };
 
   colDefs: ColDef[] = [
-    { field: 'Cargo', width: 175 },
-    { field: 'Nombre', width: 175 },
-    { field: 'Telefono', width: 175 },
-    { field: 'Correo', width: 175 }
+    { field: 'name', headerName:'Nombre', width: 175 },
+    { field: 'isActive', headerName:'Estado', width: 175 },
+    { field: 'telephone', headerName:'Telefono', width: 175 },
+    { field: 'position',headerName:'Cargo', width: 175 },
+    { field: 'email',headerName:'Correo' ,width: 175 },
+    { field: 'coments',headerName:'Comentarios', width: 175 }
   ];
 
   openDialog(): void {
@@ -62,7 +56,19 @@ export class DetallesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    console.log(this.proyecto);
-  }
+
+ngOnInit(): void {
+  console.log(this.proyecto.projectId);
+
+  this.projectService.getContactsByProjec(this.proyecto.projectId).subscribe({
+    next: (rowData: Contacts[]) => {
+      console.log(rowData);
+      this.rowData = rowData;
+      console.log(rowData);
+    },
+    error: (response) => {
+      console.log(response);
+    }
+  });
+}
 }
