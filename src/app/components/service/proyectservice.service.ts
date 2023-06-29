@@ -26,6 +26,10 @@ export class ProyectserviceService {
     return this.http.get<Contacts[]>(this.baseApiUrl + 'projects/FindProjectContacts/' + id)
   }
 
+  getContactsByUser(id: number):Observable<Contacts[]>{
+    return this.http.get<Contacts[]>(this.baseApiUrl + 'clients/FindClientContacts/' + id)
+  }
+
 
 
 

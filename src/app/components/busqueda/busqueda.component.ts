@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ColDef, GridOptions } from 'ag-grid-community';
 import { BtnDetallesComponent } from '../btn-detalles/btn-detalles.component';
+import { BtnClientesComponent } from '../btn-clientes/btn-clientes.component';
 import { Projects } from '../interfaces/projects';
 import { ProyectserviceService } from '../service/proyectservice.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -18,9 +19,11 @@ export class BusquedaComponent implements OnInit {
   searchText: string = '';
   searchByClient: boolean = false;
   dynamicColDefs: ColDef[] = [];
+  showClientButton: boolean = false;
 
   frameworkComponents = {
-    btnDetallesRenderer: BtnDetallesComponent
+    btnDetallesRenderer: BtnDetallesComponent,
+    btnClientesRenderer: BtnClientesComponent
   };
 
   defaultColDef = {
@@ -74,6 +77,7 @@ export class BusquedaComponent implements OnInit {
     this.searchByClient = !this.searchByClient;
     this.setDynamicColDefs(); // Actualizar los colDefs según el modo de búsqueda
     this.resetSearch(); // Restablecer la búsqueda al cambiar el modo de búsqueda
+    this.showClientButton = this.searchByClient; // Mostrar el botón adicional si se busca por cliente
   }
 
   resetSearch(): void {
@@ -92,7 +96,8 @@ export class BusquedaComponent implements OnInit {
       { field: 'clientName', headerName: 'Nombre del cliente', hide: !this.searchByClient },
       { field: 'clientTelephone', headerName: 'Telefono', hide: !this.searchByClient },
       { field: 'clientEmail', headerName: 'Correo', hide: !this.searchByClient },
-      { field: '', width: 95, resizable: false, cellRenderer: 'btnDetallesRenderer' }
+      { field: '', width: 95, resizable: false, cellRenderer: 'btnDetallesRenderer', hide: this.searchByClient },
+      { field: '', width: 95, resizable: false, cellRenderer: 'btnClientesRenderer', hide: !this.searchByClient }
     ];
   }
 }

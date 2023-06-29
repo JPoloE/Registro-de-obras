@@ -22,7 +22,8 @@ import 'ag-grid-enterprise';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { AgregarcontactoComponent } from './components/agregarcontacto/agregarcontacto.component';
 import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.component';
-import { DetallesClientesComponent } from './components/detalles-clientes/detalles-clientes.component'
+import { DetallesClientesComponent } from './components/detalles-clientes/detalles-clientes.component';
+import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.component'
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DetallesClientesComponent } from './components/detalles-clientes/detall
     DetallesComponent,
     AgregarcontactoComponent,
     BtnDetallesComponent,
-    DetallesClientesComponent
+    DetallesClientesComponent,
+    BtnClientesComponent
   ],
   imports: [
     BrowserModule,

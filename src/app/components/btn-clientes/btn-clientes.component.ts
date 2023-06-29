@@ -4,15 +4,16 @@ import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
 import { DetallesComponent } from '../detalles/detalles.component';
 import { ProyectserviceService } from '../service/proyectservice.service';
+import { DetallesClientesComponent } from '../detalles-clientes/detalles-clientes.component';
 
 @Component({
-  selector: 'app-btn-detalles',
+  selector: 'app-btn-clientes',
   template: `<p>
-    <button (click)="openDialog()" class="nuevo" mat-icon-button color="primary"><mat-icon>searched</mat-icon>hbjhbj</button>
+    <button (click)="openDialog()" class="nuevo" mat-icon-button color="primary"><mat-icon>searched</mat-icon></button>
   </p>`,
   styles: []
 })
-export class BtnDetallesComponent implements OnInit, ICellRendererAngularComp {
+export class BtnClientesComponent implements OnInit, ICellRendererAngularComp {
   value: any;
 
   constructor(public dialog: MatDialog, private proyectService: ProyectserviceService) { }
@@ -25,7 +26,8 @@ export class BtnDetallesComponent implements OnInit, ICellRendererAngularComp {
 
   openDialog(): void {
     this.proyectService.getProject(this.value).subscribe(project => { 
-      const dialogRef = this.dialog.open(DetallesComponent, {
+      console.log(project);
+      const dialogRef = this.dialog.open(DetallesClientesComponent, {
         data: project
       });
       dialogRef.afterClosed().subscribe(result => {
@@ -38,3 +40,4 @@ export class BtnDetallesComponent implements OnInit, ICellRendererAngularComp {
     return false;
   }
 }
+

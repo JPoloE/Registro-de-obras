@@ -3,8 +3,8 @@
     <h1>Directorio</h1>
   
     <div class="busqueda">
-      <input class="input" placeholder="Busqueda por obras" aria-label="Search" [(ngModel)]="searchText"
-        (ngModelChange)="buscar()">
+      <input class="input" placeholder="Busqueda por {{ searchByClient ? 'cliente' : 'obras' }}" aria-label="Search"
+        [(ngModel)]="searchText" (ngModelChange)="buscar()">
       <button class="btn" mat-raised-button color="primary" type="submit" (click)="buscar()">Buscar</button>
       <mat-checkbox class="check" (change)="toggleSearchByClient()">Búsqueda por cliente</mat-checkbox>
     </div>

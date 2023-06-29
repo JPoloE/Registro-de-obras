@@ -1,26 +1,40 @@
-<div class="Pagina">
+<div class="pagina">
     <br>
-    <h1>INFORMACION DE CONTACTO</h1>
-
+    <h1>Información de contacto</h1>
+  
     <div class="row">
-        <div class="col-6">
-            
-        </div>
+      <div class="col-6">
+        <form>
+          <mat-form-field class="input">
+            <mat-label>Nombre del Cliente</mat-label>
+            <input class="i" matInput [(ngModel)]="proyecto.clientName" name="clientName" />
+          </mat-form-field>
+          <mat-form-field class="input">
+            <mat-label>Teléfono del Cliente</mat-label>
+            <input class="i" matInput [(ngModel)]="proyecto.clientTelephone" name="clientTelephone" />
+          </mat-form-field>
+          <mat-form-field class="input">
+            <mat-label>Correo Electrónico del Cliente</mat-label>
+            <input class="i" matInput [(ngModel)]="proyecto.clientEmail" name="clientEmail" />
+          </mat-form-field>
+        </form>
+      </div>
     </div>
-
+  
     <h2>OTROS CONTACTOS</h2>
-    <div class="secciont">
-        <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
-            [columnDefs]="colDefs">
-
-        </ag-grid-angular>
-    </div>
-
+      <div class="secciont">
+          <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
+              [columnDefs]="colDefs">
+          </ag-grid-angular>
+      </div>
+  
+    <!-- Agregar secciones adicionales para mostrar más detalles del proyecto -->
+  
     <div class="opciones">
-        <button (click)="openDialog()" class="nuevo" mat-raised-button color="primary">Nuevo contacto</button>
-        <button class="obras" mat-raised-button color="primary">Obras</button>
-        <button class="guardar" mat-raised-button color="primary">Guardar</button>
-        <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+      <button (click)="openDialog()" class="nuevo" mat-raised-button color="primary">Nuevo contacto</button>
+      <button class="guardar" mat-raised-button color="primary">Guardar</button>
+      <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
     </div>
     <br>
-</div>
+  </div>
+  
