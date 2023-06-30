@@ -2,27 +2,35 @@
 <mat-dialog-content class="mat-typography">
     <div form class="formulario">
         <mat-form-field class="input">
-            <mat-label>Cargo</mat-label>
+            <mat-label>Nombre</mat-label>
             <input class="i" placeholder="Ingresar Nombre" matInput>
         </mat-form-field>
         <mat-form-field class="input">
-            <mat-label>Nombre</mat-label>
+            <mat-label>Telefono</mat-label>
             <input class="i" placeholder="Ingresar Telefono" matInput>
         </mat-form-field>
         <mat-form-field class="input">
-            <mat-label>Telefono</mat-label>
+            <mat-label>Correo</mat-label>
             <input class="i" placeholder="Ingresar Correo" matInput>
         </mat-form-field>
     </div>
     <div form class="formulario">
         <mat-form-field class="input">
-            <mat-label>Correo</mat-label>
-            <input class="i" placeholder="Ingresar Nombre" matInput>
+            <mat-label>Cargo</mat-label>
+            <input class="i" placeholder="Ingresar Cargo" matInput>
         </mat-form-field>
         <mat-form-field class="input">
-            <mat-label>Comentarios</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
+            <mat-label>Observaciones</mat-label>
+            <input class="i" placeholder="Ingresar observaciones" matInput>
         </mat-form-field>
+        <section class="example-section">
+            <label class="example-margin">Estado: </label>
+            <mat-radio-group [(ngModel)]="labelPosition">
+              <mat-radio-button style="margin-left: 10px;" style="margin-right:10px ;" class="example-margin" value="Activo">Activo</mat-radio-button>
+              <mat-radio-button class="example-margin" value="Inactivo">Inactivo</mat-radio-button>
+            </mat-radio-group>
+          </section>
+      
     </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

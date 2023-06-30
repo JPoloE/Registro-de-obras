@@ -60,10 +60,9 @@
           <mat-label>Correo Electrónico del Proyecto</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.projectEmail" name="projectEmail" />
         </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>Requiere Siso</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.requiresSiso" name="requiresSiso" />
-        </mat-form-field>
+
+        <mat-checkbox class="check" [(ngModel)]="proyecto.requiresSiso" name="requiresSiso">Requiere SISO</mat-checkbox>
+       
         <mat-form-field class="input">
           <mat-label>Nombre del Siso</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.sisoName" name="sisoName" />

@@ -25,6 +25,8 @@ import { BtnDetallesComponent } from './components/btn-detalles/btn-detalles.com
 import { DetallesClientesComponent } from './components/detalles-clientes/detalles-clientes.component';
 import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.component';
 import { ObrasComponent } from './components/obras/obras.component'
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -53,7 +55,8 @@ import { ObrasComponent } from './components/obras/obras.component'
     MatDialogModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule
 
   ],
   providers: [],

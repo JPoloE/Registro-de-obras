@@ -8,6 +8,12 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AgregarcontactoComponent implements OnInit {
 
+
+  checked = false;
+  indeterminate = false;
+  labelPosition: 'Activo' | 'Inactivo' = 'Activo';
+  disabled = false;
+
   constructor() { }
 
   ngOnInit(): void {
