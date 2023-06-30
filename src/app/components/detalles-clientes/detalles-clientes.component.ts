@@ -9,6 +9,8 @@ import { Projects } from '../interfaces/projects';
 import { Contacts } from '../interfaces/contacts';
 import { ObrasComponent } from '../obras/obras.component';
 import { BtnDetallesComponent } from '../btn-detalles/btn-detalles.component';
+import { BtnContactosComponent } from '../btn-contactos/btn-contactos.component';
+import { DetallesContactosComponent } from '../detalles-contactos/detalles-contactos.component';
 
 
 interface FieldConfig {
@@ -38,6 +40,10 @@ export class DetallesClientesComponent implements OnInit {
 
   rowData: Contacts[] = [];
 
+  frameworkComponents = {
+    btnContactosRenderer: BtnContactosComponent
+  };
+
   defaultColDef = {
     resizable: true,
     sortable: true,
@@ -46,14 +52,27 @@ export class DetallesClientesComponent implements OnInit {
 
 
   colDefs: ColDef[] = [
+    { field: 'position',headerName:'Rol', width: 175 },
     { field: 'name', headerName:'Nombre', width: 175 },
-    { field: 'isActive', headerName:'Estado', width: 175 },
     { field: 'telephone', headerName:'Telefono', width: 175 },
-    { field: 'position',headerName:'Cargo', width: 175 },
     { field: 'email',headerName:'Correo' ,width: 175 },
     { field: 'coments',headerName:'Comentarios', width: 175 },
+    { field: 'isActive', headerName:'Estado', width: 175 },
+    { field: '', width: 95, resizable: false, cellRenderer: 'btnContactosRenderer',cellRendererParams: {
+      onClick: (data: any) => this.openModal(data)
+    } },
     
   ];
+
+  openModal(data: any): void {
+    const dialogRef = this.dialog.open(DetallesContactosComponent, {
+      data: data
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AgregarcontactoComponent);

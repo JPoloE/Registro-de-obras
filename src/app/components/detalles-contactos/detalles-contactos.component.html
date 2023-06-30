@@ -1,0 +1,41 @@
+<h2>Detalles de contacto</h2>
+
+<div class="container">
+
+    <mat-form-field style="margin-right: 20px;">
+        <mat-label>Rol</mat-label>
+        <input matInput type="text" [(ngModel)]="rowData.position">
+      </mat-form-field>
+
+  <mat-form-field style="margin-right: 20px; size: 50px;">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" [(ngModel)]="rowData.name">
+  </mat-form-field>
+
+  <mat-form-field style="margin-right: 20px;">
+    <mat-label>Teléfono</mat-label>
+    <input matInput type="text" [(ngModel)]="rowData.telephone">
+  </mat-form-field>
+  
+  <br>
+
+  <mat-form-field style="margin-right: 20px;">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput type="email" [(ngModel)]="rowData.email">
+  </mat-form-field>
+
+  <mat-form-field style="margin-right: 20px;">
+    <mat-label>Comentarios</mat-label>
+    <textarea matInput [(ngModel)]="rowData.comments"></textarea>
+  </mat-form-field>
+
+  <mat-checkbox class="check" [(ngModel)]="rowData.isActive" name="hasClientAddress">Estado</mat-checkbox>
+
+  <div class="opciones">
+    <button style="margin-left: 60%;" style="margin-right: 20px;" class="guardar" mat-raised-button color="primary">Guardar</button>
+    <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
+  </div>
+
+  
+</div>
+

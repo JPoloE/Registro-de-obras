@@ -26,6 +26,8 @@ import { DetallesClientesComponent } from './components/detalles-clientes/detall
 import { BtnClientesComponent } from './components/btn-clientes/btn-clientes.component';
 import { ObrasComponent } from './components/obras/obras.component'
 import {MatRadioModule} from '@angular/material/radio';
+import { BtnContactosComponent } from './components/btn-contactos/btn-contactos.component';
+import { DetallesContactosComponent } from './components/detalles-contactos/detalles-contactos.component';
 
 
 
@@ -38,7 +40,9 @@ import {MatRadioModule} from '@angular/material/radio';
     BtnDetallesComponent,
     DetallesClientesComponent,
     BtnClientesComponent,
-    ObrasComponent
+    ObrasComponent,
+    BtnContactosComponent,
+    DetallesContactosComponent
   ],
   imports: [
     BrowserModule,

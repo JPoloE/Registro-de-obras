@@ -75,10 +75,7 @@
           <mat-label>Correo Electrónico del Siso</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.sisoEmail" name="sisoEmail" />
         </mat-form-field>
-        <mat-form-field class="input">
-          <mat-label>ID del Cliente</mat-label>
-          <input class="i" matInput [(ngModel)]="proyecto.clientId" name="clientId" />
-        </mat-form-field>
+
         <mat-form-field class="input">
           <mat-label>Nombre del Cliente</mat-label>
           <input class="i" matInput [(ngModel)]="proyecto.clientName" name="clientName" />
@@ -98,7 +95,7 @@
   <h2>OTROS CONTACTOS</h2>
     <div class="secciont">
         <ag-grid-angular class="ag-theme-alpine" [defaultColDef]="defaultColDef" [rowData]="rowData"
-            [columnDefs]="colDefs">
+            [columnDefs]="colDefs" [components]="frameworkComponents">
         </ag-grid-angular>
     </div>
 
