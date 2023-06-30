@@ -32,7 +32,7 @@
   <mat-checkbox class="check" [(ngModel)]="rowData.isActive" name="hasClientAddress">Estado</mat-checkbox>
 
   <div class="opciones">
-    <button style="margin-left: 60%;" style="margin-right: 20px;" class="guardar" mat-raised-button color="primary">Guardar</button>
+    <button style="margin-left: 60%; margin-right: 20px;" class="guardar" mat-raised-button color="primary" (click)="guardarCambios()">Guardar</button>
     <button class="cerrar" mat-raised-button color="primary" mat-dialog-close>Cerrar</button>
   </div>
 

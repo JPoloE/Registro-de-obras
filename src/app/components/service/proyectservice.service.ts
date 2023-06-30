@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Projects } from '../interfaces/projects';
 import { Contacts } from '../interfaces/contacts';
+import { ContactsDTO } from '../interfaces/contactsDTO';
 
 
 @Injectable({
@@ -32,6 +33,14 @@ export class ProyectserviceService {
 
   getProjectsByUser(id: number):Observable<Projects[]>{
     return this.http.get<Projects[]>(this.baseApiUrl + 'projects/FindProjectsByClientId/' + id)
+  }
+
+  addContact(contactRequest: ContactsDTO):Observable<ContactsDTO>{
+    return this.http.post<ContactsDTO>(this.baseApiUrl + 'projects/SaveProjectContact/0?username=jespinel', contactRequest)
+  }
+
+  editContact( contactRequest:ContactsDTO ): Observable<ContactsDTO>{
+    return this.http.post<ContactsDTO>(this.baseApiUrl+'projects/SaveProjectContact/7?username=jespinel/', contactRequest );
   }
 
 

@@ -3,25 +3,25 @@
     <div form class="formulario">
         <mat-form-field class="input">
             <mat-label>Nombre</mat-label>
-            <input class="i" placeholder="Ingresar Nombre" matInput>
+            <input class="i" placeholder="Ingresar Nombre" [(ngModel)]="nombreInputValue" matInput>
         </mat-form-field>
         <mat-form-field class="input">
             <mat-label>Telefono</mat-label>
-            <input class="i" placeholder="Ingresar Telefono" matInput>
+            <input class="i" placeholder="Ingresar Telefono" [(ngModel)]="telefonoInputValue" matInput>
         </mat-form-field>
         <mat-form-field class="input">
             <mat-label>Correo</mat-label>
-            <input class="i" placeholder="Ingresar Correo" matInput>
+            <input class="i" placeholder="Ingresar Correo" [(ngModel)]="correoInputValue" matInput>
         </mat-form-field>
     </div>
     <div form class="formulario">
         <mat-form-field class="input">
             <mat-label>Cargo</mat-label>
-            <input class="i" placeholder="Ingresar Cargo" matInput>
+            <input class="i" placeholder="Ingresar Cargo" [(ngModel)]="cargoInputValue" matInput>
         </mat-form-field>
         <mat-form-field class="input">
             <mat-label>Observaciones</mat-label>
-            <input class="i" placeholder="Ingresar observaciones" matInput>
+            <input class="i" placeholder="Ingresar observaciones" [(ngModel)]="observacionesInputValue" matInput>
         </mat-form-field>
         <section class="example-section">
             <label class="example-margin">Estado: </label>
@@ -35,5 +35,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cerrar</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Guardar</button>
+    <button mat-button cdkFocusInitial (click)="guardarContacto()">Guardar</button>
 </mat-dialog-actions>
