@@ -8,6 +8,7 @@ import { ProyectserviceService } from '../service/proyectservice.service';
 import { Projects } from '../interfaces/projects';
 import { Contacts } from '../interfaces/contacts';
 import { ObrasComponent } from '../obras/obras.component';
+import { BtnDetallesComponent } from '../btn-detalles/btn-detalles.component';
 
 
 interface FieldConfig {
@@ -43,13 +44,15 @@ export class DetallesClientesComponent implements OnInit {
     filter: true
   };
 
+
   colDefs: ColDef[] = [
     { field: 'name', headerName:'Nombre', width: 175 },
     { field: 'isActive', headerName:'Estado', width: 175 },
     { field: 'telephone', headerName:'Telefono', width: 175 },
     { field: 'position',headerName:'Cargo', width: 175 },
     { field: 'email',headerName:'Correo' ,width: 175 },
-    { field: 'coments',headerName:'Comentarios', width: 175 }
+    { field: 'coments',headerName:'Comentarios', width: 175 },
+    
   ];
 
   openDialog(): void {

@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProyectserviceService } from '../service/proyectservice.service';
 import { ColDef } from 'ag-grid-community';
+import { BtnDetallesComponent } from '../btn-detalles/btn-detalles.component';
 
 @Component({
   selector: 'app-obras',
@@ -30,6 +31,10 @@ export class ObrasComponent implements OnInit {
     filter: true
   };
 
+  frameworkComponents = {
+    btnDetallesRenderer: BtnDetallesComponent
+  };
+
   colDefs: ColDef[] = [
     { field: 'projectName', headerName: 'Nombre de obra', width:175 },
     { field: 'city', headerName: 'Ciudad', width:175 },
@@ -37,6 +42,7 @@ export class ObrasComponent implements OnInit {
     { field: 'locality', headerName: 'Localidad 1', width:175 },
     { field: 'locality2', headerName: 'Localidad 2', width:175 },
     { field: 'address', headerName: 'Direccion', width:175 },
+    { field: '', width: 95, resizable: false, cellRenderer: 'btnDetallesRenderer'},
     
   ];
 
