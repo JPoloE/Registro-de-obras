@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { ContactsDTO } from '../interfaces/contactsDTO';
 import { Observable } from 'rxjs';
 import { ProyectserviceService } from '../service/proyectservice.service';
+import { Projects } from '../interfaces/projects';
 
 @Component({
   selector: 'app-agregarcontacto',
@@ -18,14 +19,21 @@ export class AgregarcontactoComponent implements OnInit {
   observacionesInputValue: string = '';
   inputValues: ContactsDTO = {} as ContactsDTO;
 
-  constructor(private contactService: ProyectserviceService) { }
+  proyecto: Projects ;
+
+  constructor(
+    private contactService: ProyectserviceService,  
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) { 
+    this.proyecto = data[0];
+  }
 
   ngOnInit(): void {
   }
 
   guardarContacto(): void {
     this.inputValues = {
-      parentId: 0,
+      parentId: this.data.projectId,
       name: this.nombreInputValue,
       isActive: this.labelPosition === 'Activo',
       telephone: this.telefonoInputValue,
