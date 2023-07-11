@@ -75,7 +75,7 @@ export class DetallesClientesComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AgregarcontactoComponent);
+    const dialogRef = this.dialog.open(AgregarcontactoComponent,{data : this.proyecto});
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });

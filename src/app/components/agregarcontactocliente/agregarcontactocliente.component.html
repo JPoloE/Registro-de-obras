@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>AGREGAR CONTACTO</h2>
+<mat-dialog-content class="mat-typography">
+    <div form class="formulario">
+        <mat-form-field class="input">
+            <mat-label>Nombre</mat-label>
+            <input class="i" placeholder="Ingresar Nombre" [(ngModel)]="nombreInputValue" matInput>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Telefono</mat-label>
+            <input class="i" placeholder="Ingresar Telefono" [(ngModel)]="telefonoInputValue" matInput>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Correo</mat-label>
+            <input class="i" placeholder="Ingresar Correo" [(ngModel)]="correoInputValue" matInput>
+        </mat-form-field>
+    </div>
+    <div form class="formulario">
+        <mat-form-field class="input">
+            <mat-label>Cargo</mat-label>
+            <input class="i" placeholder="Ingresar Cargo" [(ngModel)]="cargoInputValue" matInput>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Observaciones</mat-label>
+            <input class="i" placeholder="Ingresar observaciones" [(ngModel)]="observacionesInputValue" matInput>
+        </mat-form-field>
+        <section class="example-section">
+            <label class="example-margin">Estado: </label>
+            <mat-radio-group [(ngModel)]="labelPosition">
+              <mat-radio-button style="margin-left: 10px;" style="margin-right:10px ;" class="example-margin" value="Activo">Activo</mat-radio-button>
+              <mat-radio-button class="example-margin" value="Inactivo">Inactivo</mat-radio-button>
+            </mat-radio-group>
+          </section>
+      
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cerrar</button>
+    <button mat-button cdkFocusInitial (click)="guardarContacto()">Guardar</button>
+</mat-dialog-actions>

@@ -28,6 +28,7 @@ import { ObrasComponent } from './components/obras/obras.component'
 import {MatRadioModule} from '@angular/material/radio';
 import { BtnContactosComponent } from './components/btn-contactos/btn-contactos.component';
 import { DetallesContactosComponent } from './components/detalles-contactos/detalles-contactos.component';
+import { AgregarcontactoclienteComponent } from './components/agregarcontactocliente/agregarcontactocliente.component';
 
 
 
@@ -42,7 +43,8 @@ import { DetallesContactosComponent } from './components/detalles-contactos/deta
     BtnClientesComponent,
     ObrasComponent,
     BtnContactosComponent,
-    DetallesContactosComponent
+    DetallesContactosComponent,
+    AgregarcontactoclienteComponent
   ],
   imports: [
     BrowserModule,

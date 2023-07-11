@@ -25,7 +25,7 @@ export class AgregarcontactoComponent implements OnInit {
     private contactService: ProyectserviceService,  
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { 
-    this.proyecto = data[0];
+    this.proyecto = data;
   }
 
   ngOnInit(): void {

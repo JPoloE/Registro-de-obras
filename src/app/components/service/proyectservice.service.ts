@@ -39,8 +39,8 @@ export class ProyectserviceService {
     return this.http.post<ContactsDTO>(this.baseApiUrl + 'projects/SaveProjectContact/0?username=jespinel', contactRequest)
   }
 
-  editContact( contactRequest:ContactsDTO ): Observable<ContactsDTO>{
-    return this.http.post<ContactsDTO>(this.baseApiUrl+'projects/SaveProjectContact/7?username=jespinel/', contactRequest );
+  editContact(id:number, contactRequest:Contacts ): Observable<Contacts>{
+    return this.http.post<Contacts>(this.baseApiUrl+'projects/SaveProjectContact/'+id+'?username=jespinel/', contactRequest );
   }
 
 
