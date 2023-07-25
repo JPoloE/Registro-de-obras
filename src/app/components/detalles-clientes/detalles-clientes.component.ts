@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
-import { AgregarcontactoComponent } from '../agregarcontacto/agregarcontacto.component';
+import { AgregarcontactoclienteComponent } from '../agregarcontactocliente/agregarcontactocliente.component';
 import { ColDef } from 'ag-grid-community';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -75,7 +75,7 @@ export class DetallesClientesComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AgregarcontactoComponent,{data : this.proyecto});
+    const dialogRef = this.dialog.open(AgregarcontactoclienteComponent,{data : this.proyecto});
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });

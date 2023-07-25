@@ -24,8 +24,7 @@ export class DetallesContactosComponent implements OnInit {
 
   guardarCambios(): void {
     // Crea un objeto contactRequest con los datos actualizados
-    const contactRequest: Contacts = {
-      id: this.rowData.id,
+    const contactRequest: ContactsDTO = {
       parentId: this.rowData.parentId,
       name: this.rowData.name,
       isActive: this.rowData.isActive,
@@ -37,7 +36,7 @@ export class DetallesContactosComponent implements OnInit {
 
     // Llama al servicio para guardar los cambios
     this.contactService.editContact(this.rowData.id, contactRequest).subscribe(
-      (response: Contacts) => {
+      (response: ContactsDTO) => {
         console.log(response);
         console.log(contactRequest);
         // Aquí puedes realizar alguna acción adicional después de guardar los cambios

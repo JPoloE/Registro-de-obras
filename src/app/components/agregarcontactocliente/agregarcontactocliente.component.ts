@@ -27,6 +27,7 @@ constructor(
 }
 
 ngOnInit(): void {
+  console.log(this.proyecto)
 }
 
 guardarContacto(): void {
